@@ -3,9 +3,7 @@ all: prolog-prerequisites deb
 .PHONY: prolog-prerequisites
 prolog-prerequisites:
 	apt-get update -y
-	apt-get install -y --no-install-recommends build-essential cmake ninja-build pkg-config ncurses-dev libreadline-dev libedit-dev \
-		libgoogle-perftools-dev libgmp-dev libssl-dev unixodbc-dev zlib1g-dev libarchive-dev libossp-uuid-dev libxext-dev \
-		libice-dev libjpeg-dev libxinerama-dev libxft-dev libxpm-dev libxt-dev libdb-dev libpcre2-dev libyaml-dev default-jdk junit4
+	apt-get install -y --no-install-recommends cmake ninja-build
 
 .PHONY: deb
 deb:  swipl-devel/build/swipl-8.5.2-1.x86_64.deb
