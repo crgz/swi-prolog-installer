@@ -2,7 +2,8 @@ all: prolog-prerequisites deb
 
 .PHONY: prolog-prerequisites
 prolog-prerequisites:
-	apt-get install -y build-essential cmake ninja-build pkg-config ncurses-dev libreadline-dev libedit-dev \
+	apt-get update -y
+	apt-get install -y --no-install-recommends build-essential cmake ninja-build pkg-config ncurses-dev libreadline-dev libedit-dev \
 		libgoogle-perftools-dev libgmp-dev libssl-dev unixodbc-dev zlib1g-dev libarchive-dev libossp-uuid-dev libxext-dev \
 		libice-dev libjpeg-dev libxinerama-dev libxft-dev libxpm-dev libxt-dev libdb-dev libpcre2-dev libyaml-dev default-jdk junit4
 
